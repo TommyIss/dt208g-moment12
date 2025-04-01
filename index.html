@@ -1,13 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Moment 1.2</title>
   </head>
   <body>
-    <div id="app"></div>
+    <fieldset>
+      <legend>Mata in kursinfo</legend>
+      <form action="">
+        <label for="code">Kurskod:</label>
+        <input type="text" id="course-code">
+        <br>
+        <label for="name">Kurskod:</label>
+        <input type="text" id="course-name">
+        <br>
+        <label for="progression">Progression:</label>
+        <input type="text" id="progression">
+      </form>
+    </fieldset>
+    <table id="course-table">
+      <tr>
+        <th>Kurskod</th>
+        <th>Kursnamn</th>
+        <th>Progression</th>
+      </tr>
+    </table>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
