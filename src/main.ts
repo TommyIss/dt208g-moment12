@@ -100,7 +100,7 @@ function addCourse(course: CourseInfo): void {
   let checkData: HTMLTableCellElement = document.createElement('td');
   checkData.appendChild(checkBox);
   checkBox.setAttribute('type', 'checkbox');
-  checkBox.addEventListener('change', (event) => {
+  checkBox.addEventListener('change', () => {
     
     // Kontrollera om checkbox är kryssad eller inte
     if(checkBox.checked){
