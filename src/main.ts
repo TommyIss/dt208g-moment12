@@ -97,6 +97,8 @@ function addCourse(course: CourseInfo): void {
   
   // Checkbox
   let checkBox: HTMLInputElement = document.createElement('input');
+  let checkData: HTMLTableCellElement = document.createElement('td');
+  checkData.appendChild(checkBox);
   checkBox.setAttribute('type', 'checkbox');
   checkBox.addEventListener('change', (event) => {
     
@@ -119,7 +121,7 @@ function addCourse(course: CourseInfo): void {
   dataRow.appendChild(nameData);
   dataRow.appendChild(progressData);
   dataRow.appendChild(linkData);
-  dataRow.appendChild(checkBox);
+  dataRow.appendChild(checkData);
 
   // Lägg till rad i tabellen
   tableBody.appendChild(dataRow);
