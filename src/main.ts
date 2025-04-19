@@ -177,11 +177,15 @@ function saveCourse() {
 
 
   // If-sats för att kontrollera att kurskod är unik och inte finns, samt att progression är begränsat till A, B, C
-  if(courses.some(newCourse => newCourse.code.toLowerCase() !== newCourseInfo.code.toLowerCase()) && newCourseInfo.progress === 'A' || newCourseInfo.progress === 'B' || newCourseInfo.progress === 'C') {
+  if(courses.every(newCourse => newCourse.code.toLowerCase() !== newCourseInfo.code.toLowerCase()) && (newCourseInfo.progress === 'A' || newCourseInfo.progress === 'B' || newCourseInfo.progress === 'C')) {
   addCourse(newCourseInfo);
   courses.push(newCourseInfo);
   }
+
+  // Spara till localstorage
   localStorage.setItem('courses', JSON.stringify(courses));
+  
+  // Töm inmatningsfält
   courseCode.value = '';
   courseName.value = '';
   progression.value = '';
